@@ -18,7 +18,7 @@
 
 ## For stoping and removing a specific container:
 
-- docker rm name -of-container -f
+- docker rm name-of-container -f
 
 ## For displaying docker containers:
 
