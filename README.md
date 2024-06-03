@@ -26,4 +26,4 @@
 
 ## For executing a command on a specific container:
 
-- docker exec -it express-node-app-container {{bash}}
+- docker exec -it name-of-container {{bash}}
