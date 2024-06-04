@@ -35,3 +35,7 @@
 ## Volumes of container (Example):
 
 - docker run --name express-node-app-container -v $(pwd):/app:ro -v /app/node_modules -d -p 5000:5000 express-node-app
+
+## To run docker compose that is responsible for running docker container
+
+- docker-compose up -d
