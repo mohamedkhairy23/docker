@@ -39,3 +39,7 @@
 ## To run a docker-compose file that is responsible for running a docker container:
 
 - docker-compose up -d
+
+## To close or removing a docker container by docker-compose cleanup:
+
+- docker-compose down
