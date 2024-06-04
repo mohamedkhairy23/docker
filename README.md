@@ -27,3 +27,11 @@
 ## For executing a command on a specific container:
 
 - docker exec -it name-of-container {{bash}}
+
+## Logs of container:
+
+- docker logs name-of-container
+
+## Volumes of container (Example):
+
+- docker run --name express-node-app-container -v $(pwd):/app:ro -v /app/node_modules -d -p 5000:5000 express-node-app
