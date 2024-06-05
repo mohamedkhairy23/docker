@@ -1,0 +1,5 @@
+version: "2.27.0"
+services:
+  node-app:
+    environment:
+      - NODE_ENV=production

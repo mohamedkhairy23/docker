@@ -1,8 +1,11 @@
 ## To create an image from a docker file:
 
 - docker build -t name-of-docker-image .
-  OR
-- docker build -t name-of-docker-image Dockerfile
+- (OR)
+- docker build -t {name-of-docker-image} Dockerfile
+  Examples:
+- docker build -t express-node-app .
+- docker build -t express-node-app Dockerfile
 
 ## To display all docker images:
 
@@ -48,3 +51,19 @@
 ## To close or removing a docker container by docker-compose cleanup:
 
 - docker-compose down
+
+## To run a specific docker compose file (Example):
+
+- docker-compose -f docker-compose.dev.yml up -d
+
+## To close a specific docker compose file (Example):
+
+- docker-compose -f docker-compose.dev.yml down
+
+## To run a specific docker compose file with a common docker-compose.yml file (Example):
+
+- docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+## To run a container with a specific docker compose file using a common docker-compose.yml file and build a new image (Example):
+
+- docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
