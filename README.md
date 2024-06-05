@@ -23,7 +23,7 @@
 
 - docker rm name-of-container -f
 
-## For displaying docker containers:
+## For displaying running docker containers:
 
 - docker ps
 
@@ -38,7 +38,7 @@
 
 ## Logs of container:
 
-- docker logs name-of-container
+- docker logs name-of-container -f
 
 ## Volumes of container (Example):
 
