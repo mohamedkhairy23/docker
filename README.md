@@ -71,3 +71,7 @@
 ## To run a container with a specific docker compose file using a common docker-compose.yml file and build a new image (Example):
 
 - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+## To remove old volumes (not used):
+
+- docker volume prune
