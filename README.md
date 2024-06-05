@@ -24,9 +24,14 @@
 
 - docker ps
 
-## For executing a command on a specific container:
+## For executing a command on a running container (Example):
 
-- docker exec -it name-of-container {{bash}}
+- docker exec -it name-of-container bash
+
+## To show docker environments:
+
+- docker exec -it name-of-container bash
+- printenv
 
 ## Logs of container:
 
