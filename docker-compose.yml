@@ -7,6 +7,5 @@ services:
       - ./src:/app/src:ro
     ports:
       - "5000:5000"
-    environment:
-      - PORT=5000
-      - NODE_ENV=production
+    env_file:
+      - ./.env
