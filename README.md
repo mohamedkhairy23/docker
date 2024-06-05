@@ -64,6 +64,10 @@
 
 - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
+## To close a specific docker compose file with a common docker-compose.yml file (Example):
+
+- docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
+
 ## To run a container with a specific docker compose file using a common docker-compose.yml file and build a new image (Example):
 
 - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
