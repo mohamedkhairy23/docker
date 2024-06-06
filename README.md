@@ -75,3 +75,7 @@
 ## To remove the old volumes (not used volumes):
 
 - docker volume prune
+
+## To display a list of running volumes:
+
+- docker volume ls
