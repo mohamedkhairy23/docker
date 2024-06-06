@@ -72,6 +72,6 @@
 
 - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
-## To remove old volumes (not used):
+## To remove the old volumes (not used volumes):
 
 - docker volume prune
