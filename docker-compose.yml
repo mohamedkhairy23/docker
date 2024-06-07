@@ -7,26 +7,19 @@ services:
     env_file:
       - ./.env
     depends_on:
-      #node-app-container doen't runing until mongo container is running
+      # node-app-container doesn't running until mongo, and redis containers is running
       - mongo
+      - redis
   mongo:
     image: mongo
     restart: always
     volumes:
       - mongo-db:/data/db
-    # environment:
-    #   MONGO_INITDB_ROOT_USERNAME: root
-    #   MONGO_INITDB_ROOT_PASSWORD: example
   mongo-express:
     image: mongo-express
     restart: always
     ports:
       - "8081:8081"
-    # environment:
-    #   ME_CONFIG_MONGODB_ADMINUSERNAME: root
-    #   ME_CONFIG_MONGODB_ADMINPASSWORD: example
-    #   ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-    #   ME_CONFIG_BASICAUTH: false
     depends_on:
       - mongo
   redis:
@@ -34,5 +27,14 @@ services:
     restart: always
     ports:
       - "6379:6379"
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - node-app
+
 volumes:
   mongo-db:

@@ -79,3 +79,9 @@
 ## To display a list of running volumes:
 
 - docker volume ls
+
+////////////////////////////////////////////////////////////////////////////////
+
+## Note:
+
+- In Nginx config file, if you work with http you are listening on port 80, but if you work with https you are listening on port 443
