@@ -3,9 +3,12 @@ services:
   node-app:
     container_name: express-node-app-container
     ports:
-      - "5000:5000"
+      - "4000:4000"
     env_file:
       - ./.env
+    depends_on:
+      #node-app-container doen't runing until mongo container is running
+      - mongo
   mongo:
     image: mongo
     restart: always
@@ -24,6 +27,12 @@ services:
     #   ME_CONFIG_MONGODB_ADMINPASSWORD: example
     #   ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
     #   ME_CONFIG_BASICAUTH: false
-
+    depends_on:
+      - mongo
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
 volumes:
   mongo-db:
